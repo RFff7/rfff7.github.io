@@ -19,7 +19,7 @@
 .hero-text h1 { font-size: clamp(28px, 4vw, 44px); margin: 0 0 12px; }
 .hero-text p { color: var(--muted); margin: 0 0 18px; }
 .hero-card { border: 1px solid color-mix(in oklab, var(--text), transparent 90%); border-radius: 16px; overflow: hidden; background: var(--card); box-shadow: 0 10px 30px color-mix(in oklab, var(--text), transparent 92%); }
-.hero-card img { aspect-ratio: 16 / 9; object-fit: cover; }
+.hero-card img { aspect-ratio: 16 / 9; object-fit: contain; }
 
 
 /* Cards & Grid */
