@@ -71,3 +71,9 @@
 .hero { grid-template-columns: 1fr; }
 .about-card { grid-template-columns: 1fr; }
 }
+
+/* 缩略图大小与裁切 */
+.gallery { display: grid; gap: 12px; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); }
+.thumb { border: 0; padding: 0; background: transparent; border-radius: 12px; overflow: hidden; }
+.thumb img { width: 100%; height: 160px; object-fit: cover; display: block; }
+
