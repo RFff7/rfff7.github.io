@@ -1,12 +1,73 @@
-body {
-  font-family: system-ui, sans-serif;
-  text-align: center;
-  padding: 50px;
-  background-color: #fffafc;
-}
-h1 {
-  color: #ff6699;
-}
-p {
-  color: #555;
+/* Base */
+.container { max-width: 1080px; margin: 0 auto; padding: 20px; }
+.section { padding: 48px 0; }
+.section-title { font-size: clamp(24px, 2.8vw, 32px); margin: 0 0 20px; }
+.btn { display: inline-block; padding: 12px 18px; border-radius: 12px; background: var(--accent); color: #fff; text-decoration: none; font-weight: 600; box-shadow: 0 8px 24px var(--ring); }
+
+
+/* Header */
+.site-header { display: flex; align-items: center; justify-content: space-between; padding-block: 14px; position: sticky; top: 0; background: color-mix(in oklab, var(--bg), transparent 0%); backdrop-filter: saturate(1.2) blur(8px); z-index: 10; border-bottom: 1px solid color-mix(in oklab, var(--text), transparent 92%); }
+.brand { font-weight: 800; letter-spacing: 0.2px; color: var(--brand); text-decoration: none; font-size: 18px; }
+.nav { display: flex; gap: 16px; align-items: center; }
+.nav a { color: var(--text); text-decoration: none; opacity: 0.85; }
+.nav a:hover { opacity: 1; }
+.theme-toggle { border: 1px solid color-mix(in oklab, var(--text), transparent 85%); background: transparent; border-radius: 10px; padding: 6px 10px; cursor: pointer; }
+
+
+/* Hero */
+.hero { display: grid; grid-template-columns: 1.2fr 1fr; gap: 24px; align-items: center; padding-block: 40px; }
+.hero-text h1 { font-size: clamp(28px, 4vw, 44px); margin: 0 0 12px; }
+.hero-text p { color: var(--muted); margin: 0 0 18px; }
+.hero-card { border: 1px solid color-mix(in oklab, var(--text), transparent 90%); border-radius: 16px; overflow: hidden; background: var(--card); box-shadow: 0 10px 30px color-mix(in oklab, var(--text), transparent 92%); }
+.hero-card img { aspect-ratio: 16 / 9; object-fit: cover; }
+
+
+/* Cards & Grid */
+.grid { display: grid; gap: 18px; }
+.videos { grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
+.card { background: var(--card); border: 1px solid color-mix(in oklab, var(--text), transparent 90%); border-radius: 14px; overflow: hidden; transition: transform .2s ease, box-shadow .2s ease; }
+.card:hover { transform: translateY(-3px); box-shadow: 0 14px 36px color-mix(in oklab, var(--text), transparent 90%); }
+.card-body { padding: 14px 14px 18px; }
+.card h3 { margin: 0 0 6px; font-size: 18px; }
+.card p { margin: 0 0 10px; color: var(--muted); }
+.tags { list-style: none; padding: 0; margin: 0; display: flex; flex-wrap: wrap; gap: 6px; }
+.tags li { font-size: 12px; border: 1px solid color-mix(in oklab, var(--text), transparent 85%); padding: 4px 8px; border-radius: 999px; }
+
+
+/* Responsive embeds */
+.embed { position: relative; width: 100%; aspect-ratio: 16 / 9; background: #000; }
+.embed iframe, .embed video { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+
+
+/* Gallery */
+.gallery { grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); }
+.thumb { border: 0; padding: 0; background: transparent; border-radius: 12px; overflow: hidden; cursor: zoom-in; outline: none; }
+.thumb img { width: 100%; height: 160px; object-fit: cover; transition: transform .25s ease; }
+.thumb:hover img { transform: scale(1.04); }
+
+
+.lightbox::backdrop { background: rgba(0,0,0,.6); backdrop-filter: blur(2px); }
+.lightbox { border: none; padding: 0; border-radius: 16px; overflow: hidden; background: transparent; }
+.lightbox img { display: block; max-width: min(92vw, 1200px); max-height: 86vh; border-radius: 16px; }
+.lightbox .close { position: fixed; top: 16px; right: 16px; background: rgba(0,0,0,.55); color: #fff; border: none; width: 36px; height: 36px; border-radius: 50%; font-size: 20px; cursor: pointer; }
+
+
+/* About */
+.about-card { display: grid; grid-template-columns: 180px 1fr; gap: 20px; align-items: start; background: var(--card); border: 1px solid color-mix(in oklab, var(--text), transparent 90%); border-radius: 16px; padding: 18px; }
+.about-card img { width: 180px; height: 180px; object-fit: cover; border-radius: 14px; }
+
+
+/* Contact */
+.contact { list-style: none; padding: 0; margin: 0; display: grid; gap: 8px; }
+.contact a { color: var(--text); }
+
+
+/* Footer */
+.site-footer { border-top: 1px solid color-mix(in oklab, var(--text), transparent 90%); padding: 24px 0; text-align: center; color: var(--muted); }
+
+
+/* Mobile tweaks */
+@media (max-width: 860px) {
+.hero { grid-template-columns: 1fr; }
+.about-card { grid-template-columns: 1fr; }
 }

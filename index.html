@@ -1,15 +1,137 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Ruofeng Chen | Portfolio</title>
-  <link rel="stylesheet" href="style.css">
+  <meta name="description" content="Portfolio of Ruofeng Chen – New Media Technology: video, motion design, 3D, and interactive web." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <h1>Hi, I'm Ruofeng Chen 👋</h1>
-  <p>Welcome to my portfolio website.</p>
-  <p>More projects coming soon!</p>
+  <header class="site-header container">
+    <a class="brand" href="#top">Ruofeng Chen</a>
+    <nav class="nav" aria-label="Primary">
+      <a href="#work">Work</a>
+      <a href="#gallery">Images</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+      <button id="themeToggle" class="theme-toggle" aria-label="Toggle dark mode">☾</button>
+    </nav>
+  </header>
+
+  <main id="top">
+    <!-- Hero -->
+    <section class="hero container">
+      <div class="hero-text">
+        <h1>Visual Storytelling for Web, Video & 3D</h1>
+        <p>NYC-based New Media Technology student passionate about motion graphics, video editing, and expressive visual storytelling.</p>
+        <a href="#work" class="btn">View Selected Work</a>
+      </div>
+      <div class="hero-card">
+        <img src="images/cover.png" alt="Portfolio cover – montage of work" loading="eager"/>
+      </div>
+    </section>
+
+    <!-- Selected Work (3 videos) -->
+    <section id="work" class="container section">
+      <h2 class="section-title">Selected Work</h2>
+      <div class="grid videos">
+        <!-- Video 1 -->
+        <article class="card">
+          <div class="embed">
+            <!-- Replace VIDEO_ID_1 with your YouTube ID or Vimeo embed URL -->
+            <iframe title="Woodhull Farmers Market Promo" src="https://www.youtube.com/embed/IS13UC6xBII?si=dyWghP4irMMEWoZi" loading="lazy" allowfullscreen></iframe>
+          </div>
+          <div class="card-body">
+            <h3>Woodhull Farmers Market Promo</h3>
+            <p>Role: Editor · Motion Graphics · Social Cut</p>
+            <ul class="tags"><li>Video</li><li>AE</li><li>Premiere</li></ul>
+          </div>
+        </article>
+
+        <!-- Video 2 -->
+        <article class="card">
+          <div class="embed">
+            <iframe title="Chinatown Documentary" src="https://www.youtube.com/embed/4YkgtccyuzA?si=vCbbtK_M2pVeBTGI" loading="lazy" allowfullscreen></iframe>
+          </div>
+          <div class="card-body">
+            <h3>Chinatown Documentary (Excerpt)</h3>
+            <p>Story, camera, and edit. Exploring culture, resilience, and urban change.</p>
+            <ul class="tags"><li>Documentary</li><li>NYC</li></ul>
+          </div>
+        </article>
+
+        <!-- Video 3 -->
+        <article class="card">
+          <div class="embed">
+            <iframe title="Hello Kitty Animation" src="https://www.youtube.com/embed/OgPHnvL1s0M" loading="lazy" allowfullscreen></iframe>
+          </div>
+          <div class="card-body">
+            <h3>Hello Kitty Mini Animation</h3>
+            <p>Blender + AE composite. Cute motion with subtle bounce and parallax.</p>
+            <ul class="tags"><li>3D</li><li>Animation</li></ul>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Image Gallery -->
+    <section id="gallery" class="container section">
+      <h2 class="section-title">Image Gallery</h2>
+      <div class="grid gallery" id="galleryGrid">
+        <!-- Replace with your images; use consistent aspect for best grid -->
+        <button class="thumb" data-full="images/shot1-large.jpg" aria-label="Open image 1">
+          <img src="images/shot1.png" alt="Phone home screen design" loading="lazy"></button>
+        <button class="thumb" data-full="images/shot2-large.jpg" aria-label="Open image 2">
+          <img src="images/shot2.png" alt="Phone lock screen design" loading="lazy"></button>
+        <button class="thumb" data-full="images/shot3-large.jpg" aria-label="Open image 3">
+          <img src="images/shot3.png" alt="Desktop design" loading="lazy"></button>
+        <button class="thumb" data-full="images/shot4-large.jpg" aria-label="Open image 4">
+          <img src="images/shot4.png" alt="Infographic design" loading="lazy"></button>
+        <button class="thumb" data-full="images/shot5-large.jpg" aria-label="Open image 5">
+          <img src="images/shot5.png" alt="One page design" loading="lazy"></button>
+        <button class="thumb" data-full="images/shot6-large.jpg" aria-label="Open image 6">
+          <img src="images/shot6.jpg" alt="Chinatown photography" loading="lazy"></button>
+      </div>
+
+      <!-- Lightbox Modal -->
+      <dialog id="lightbox" class="lightbox" aria-label="Image preview">
+        <button class="close" aria-label="Close" formmethod="dialog">×</button>
+        <img id="lightboxImg" src="" alt="Expanded image" />
+      </dialog>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="container section about">
+      <div class="about-card">
+        <img src="images/profile.jpg" alt="Portrait of Ruofeng Chen" />
+        <div>
+          <h2 class="section-title">About</h2>
+          <p>Hi! I’m Ruofeng, a New Media Technology student at LaGuardia Community College in NYC. I focus on video editing, motion graphics (After Effects), 3D (Blender), and interactive web projects. I love blending documentary storytelling with playful, psycho‑cute aesthetics.</p>
+          <p>Recent work includes a community promo at NYC Health + Hospitals / Woodhull, a Chinatown short doc, and animation experiments featuring Hello Kitty & Mimmy White.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact / Footer -->
+    <section id="contact" class="container section">
+      <h2 class="section-title">Contact</h2>
+      <ul class="contact">
+        <li>Email: <a href="ruofengchen1020@gmail.com">ruofengchen1020@gmail.com</a></li>
+        <li>Instagram: <a href="https://www.instagram.com/icyy2o18" target="_blank" rel="noopener">icyy2o18</a></li>
+        <li>Resume: <a href="resume.png" target="_blank" rel="noopener">Download PDF</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <small>© <span id="year"></span> Ruofeng Chen · All rights reserved.</small>
+    </div>
+  </footer>
 
   <script src="script.js"></script>
 </body>
