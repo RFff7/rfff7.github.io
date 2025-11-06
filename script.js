@@ -20,20 +20,26 @@ updateIcon();
 });
 
 
-// Simple lightbox for gallery
+// ✅ Simple lightbox for gallery
 const lightbox = document.getElementById('lightbox');
 const lightboxImg = document.getElementById('lightboxImg');
+const grid = document.getElementById('galleryGrid');
 
+grid?.addEventListener('click', (e) => {
+  const btn = e.target.closest('button.thumb');
+  if (!btn) return;
 
-document.getElementById('galleryGrid')?.addEventListener('click', (e) => {
-const btn = e.target.closest('button.thumb');
-if (!btn) return;
-const src = btn.getAttribute('data-full') || btn.querySelector('img')?.src;
-lightboxImg.src = src;
-lightbox.showModal();
+  const thumb = btn.querySelector('img');
+  const candidate = btn.getAttribute('data-full');
+  const fallback = thumb?.src;
+
+  // ✅ Try full image; fallback to thumb if broken
+  lightboxImg.onerror = () => { 
+    lightboxImg.src = fallback; 
+  };
+
+  lightboxImg.src = (candidate && candidate.trim()) ? candidate : fallback;
+
+  lightbox.showModal();
 });
 
-
-lightbox?.addEventListener('click', (e) => {
-if (e.target === lightbox) lightbox.close();
-});
