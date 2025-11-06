@@ -7,7 +7,7 @@
 
 /* Header */
 .site-header { display: flex; align-items: center; justify-content: space-between; padding-block: 14px; position: sticky; top: 0; background: color-mix(in oklab, var(--bg), transparent 0%); backdrop-filter: saturate(1.2) blur(8px); z-index: 10; border-bottom: 1px solid color-mix(in oklab, var(--text), transparent 92%); }
-.brand { font-weight: 800; letter-spacing: 0.2px; color: var(--brand); text-decoration: none; font-size: 18px; }
+.brand { font-weight: 800; letter-spacing: 0.2px; color: var(--brand); text-decoration: none; font-size: 24px; }
 .nav { display: flex; gap: 16px; align-items: center; }
 .nav a { color: var(--text); text-decoration: none; opacity: 0.85; }
 .nav a:hover { opacity: 1; }

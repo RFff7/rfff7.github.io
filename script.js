@@ -43,3 +43,19 @@ grid?.addEventListener('click', (e) => {
   lightbox.showModal();
 });
 
+// Close actions
+const closeBtn = document.querySelector('#lightbox .close');
+
+// 点击“×”关闭
+closeBtn?.addEventListener('click', () => lightbox.close());
+
+// 点遮罩关闭（已加过也可以保留）
+lightbox?.addEventListener('click', (e) => {
+  if (e.target === lightbox) lightbox.close();
+});
+
+// 按 Esc 关闭（保险）
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape' && lightbox?.open) lightbox.close();
+});
+
