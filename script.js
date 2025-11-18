@@ -59,3 +59,35 @@ document.addEventListener('keydown', (e) => {
   if (e.key === 'Escape' && lightbox?.open) lightbox.close();
 });
 
+console.log("theme script loaded");
+
+const themeToggleBtn = document.getElementById("themeToggle");
+
+// 从 localStorage 读取之前的主题（如果有）
+const savedTheme = localStorage.getItem("theme");
+console.log("savedTheme:", savedTheme);
+
+if (savedTheme === "dark") {
+  document.body.classList.add("dark");
+  themeToggleBtn.textContent = "☀"; // 暗色模式下显示太阳
+} else {
+  themeToggleBtn.textContent = "☾"; // 亮色模式下显示月亮
+}
+
+// 点击切换主题
+themeToggleBtn.addEventListener("click", () => {
+  console.log("theme toggle clicked");
+
+  document.body.classList.toggle("dark");
+
+  const isDark = document.body.classList.contains("dark");
+  console.log("isDark:", isDark);
+
+  if (isDark) {
+    themeToggleBtn.textContent = "☀";
+    localStorage.setItem("theme", "dark");
+  } else {
+    themeToggleBtn.textContent = "☾";
+    localStorage.setItem("theme", "light");
+  }
+});
