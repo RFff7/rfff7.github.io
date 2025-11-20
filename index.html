@@ -11,83 +11,37 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <!-- 顶部导航 -->
-  <header class="site-header">
-    <a class="brand" href="#top">Portfolio</a>
+  <header class="site-header container">
+    <a class="brand" href="#top">Ruofeng Chen</a>
     <nav class="nav" aria-label="Primary">
-      <a href="#about">Bio</a>
       <a href="#work">Work</a>
-      <a href="#contact">Contact</a>
+      <a href="#gallery">Images</a>
+    
       <button id="themeToggle" class="theme-toggle" aria-label="Toggle dark mode">☾</button>
     </nav>
   </header>
 
   <main id="top">
-    <!-- HERO 卡片：左文字 / 中间竖排 hero / 右边 Hello Kitty -->
-    <section class="panel panel-hero panel-full">
-
-      <div class="hero-left">
-        <p class="hero-name">Ruofeng Chen</p>
-        <p class="hero-title">
-          Visual storytelling in<br>
-          graphic, videos
-        </p>
+    <!-- Hero -->
+    <section class="hero container">
+      <div class="hero-text">
+        <h1>Visual Storytelling for Web, Video &amp; 3D</h1>
+        <p>NYC-based New Media Technology student passionate about motion graphics, video editing, and expressive visual storytelling.</p>
+        <a href="#work" class="btn">View Selected Work</a>
       </div>
-
-      
-
-      <div class="hero-right">
-        <img src="images/hello-kitty.png" alt="Hello Kitty illustration" class="hero-kitty">
-        <p class="hero-welcome">Welcome to my portfolio! &lt;3</p>
+      <div class="hero-card">
+        <img src="images/hello-kitty.png" alt="hello" loading="eager"/>
       </div>
     </section>
 
-    <!-- BIO 卡片：左边头像 + contact，右边文字 -->
-    <section id="about" class="panel panel-bio">
-      <div class="bio-left">
-        <div class="bio-image-wrapper">
-          <img src="images/profile.jpg" alt="Portrait of Ruofeng Chen">
-        </div>
-
-        <div class="bio-contact">
-          <h3>Contact</h3>
-          <ul>
-            <li><a href="mailto:ruofengchen1020@gmail.com">email</a></li>
-            <li><a href="https://www.instagram.com/icyy2o18" target="_blank" rel="noopener">instagram</a></li>
-            <li><a href="#contact">resume</a></li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="bio-text">
-        <p>
-          Hi! I’m Ruofeng, a New Media Technology student based in NYC. 
-          I create motion graphics and short videos that explore stories of community, 
-          culture, and emotion through engaging visuals.
-        </p>
-        <p>
-          Recent projects include a Chinatown short documentary, a community promo for 
-          NYC Health + Hospitals / Woodhull, and Hello Kitty video pieces.
-        </p>
-      </div>
-    </section>
-
-    <!-- SELECTED WORKS 卡片：上面 videos，下面 images -->
-    <section id="work" class="panel panel-work">
-      <h2 class="panel-title">selected works</h2>
-
-      <!-- 视频区 -->
-      <h3 class="panel-subtitle">videos</h3>
+    <!-- Selected Work (3 videos) -->
+    <section id="work" class="container section">
+      <h2 class="section-title">Selected Work</h2>
       <div class="grid videos">
         <!-- Video 1 -->
         <article class="card">
           <div class="embed">
-            <iframe
-              title="Woodhull Farmers Market Promo"
-              src="https://www.youtube.com/embed/IS13UC6xBII?si=dyWghP4irMMEWoZi"
-              loading="lazy"
-              allowfullscreen>
-            </iframe>
+            <iframe title="Woodhull Farmers Market Promo" src="https://www.youtube.com/embed/IS13UC6xBII?si=dyWghP4irMMEWoZi" loading="lazy" allowfullscreen></iframe>
           </div>
           <div class="card-body">
             <h3>Woodhull Farmers Market Promo</h3>
@@ -99,12 +53,7 @@
         <!-- Video 2 -->
         <article class="card">
           <div class="embed">
-            <iframe
-              title="Chinatown Documentary"
-              src="https://www.youtube.com/embed/4YkgtccyuzA?si=vCbbtK_M2pVeBTGI"
-              loading="lazy"
-              allowfullscreen>
-            </iframe>
+            <iframe title="Chinatown Documentary" src="https://www.youtube.com/embed/4YkgtccyuzA?si=vCbbtK_M2pVeBTGI" loading="lazy" allowfullscreen></iframe>
           </div>
           <div class="card-body">
             <h3>Chinatown Documentary (Excerpt)</h3>
@@ -116,46 +65,77 @@
         <!-- Video 3 -->
         <article class="card">
           <div class="embed">
-            <iframe
-              title="Hello Kitty Animation"
-              src="https://www.youtube.com/embed/OgPHnvL1s0M"
-              loading="lazy"
-              allowfullscreen>
-            </iframe>
+            <iframe title="Hello Kitty Animation" src="https://www.youtube.com/embed/OgPHnvL1s0M" loading="lazy" allowfullscreen></iframe>
           </div>
           <div class="card-body">
             <h3>Hello Kitty Mini Video</h3>
-            <p>
-              Designed and composited a motion piece in After Effects that merges
-              cute visual style with a message on rising political concern.
-            </p>
+            <p>Designed and composited a motion piece in After Effects that merges cute visual style with a message on rising political concern.</p>
             <ul class="tags"><li>AE</li><li>Animation</li></ul>
           </div>
         </article>
       </div>
+    </section>
 
-      <!-- 图片区（imagine） -->
-      <h3 class="panel-subtitle">imagine</h3>
-      <div class="image-grid">
-        <div class="image-block">
-          <img src="images/shot1.png" alt="Design shot 1">
-        </div>
-        <div class="image-block">
-          <img src="images/shot2.png" alt="Design shot 2">
-        </div>
-        <div class="image-block">
-          <img src="images/shot3.png" alt="Design shot 3">
-        </div>
-        <div class="image-block">
-          <img src="images/shot4.png" alt="Design shot 4">
-        </div>
-        <div class="image-block">
-          <img src="images/shot5.png" alt="Design shot 5">
-        </div>
-        <div class="image-block">
-          <img src="images/shot6.jpg" alt="Design shot 6">
+    <!-- Image Gallery -->
+    <section id="gallery" class="container section">
+      <h2 class="section-title">Image Gallery</h2>
+      <div class="grid gallery" id="galleryGrid">
+        <button class="thumb" data-full="images/shot1-large.jpg" aria-label="Open image 1">
+          <img src="images/shot1.png" alt="Phone home screen design" loading="lazy">
+        </button>
+        <button class="thumb" data-full="images/shot2-large.jpg" aria-label="Open image 2">
+          <img src="images/shot2.png" alt="Phone lock screen design" loading="lazy">
+        </button>
+        <button class="thumb" data-full="images/shot3-large.jpg" aria-label="Open image 3">
+          <img src="images/shot3.png" alt="Desktop design" loading="lazy">
+        </button>
+        <button class="thumb" data-full="images/shot4-large.jpg" aria-label="Open image 4">
+          <img src="images/shot4.png" alt="Infographic design" loading="lazy">
+        </button>
+        <button class="thumb" data-full="images/shot5-large.jpg" aria-label="Open image 5">
+          <img src="images/shot5.png" alt="One page design" loading="lazy">
+        </button>
+        <button class="thumb" data-full="images/shot6-large.jpg" aria-label="Open image 6">
+          <img src="images/shot6.jpg" alt="Chinatown photography" loading="lazy">
+        </button>
+      </div>
+
+      <!-- Lightbox Modal -->
+      <dialog id="lightbox" class="lightbox" aria-label="Image preview">
+        <button class="close" aria-label="Close" formmethod="dialog">×</button>
+        <img id="lightboxImg" src="" alt="Expanded image" />
+      </dialog>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="container section about">
+      <div class="about-card">
+        <img src="images/profile.jpg" alt="Portrait of Ruofeng Chen" />
+        <div>
+          <h2 class="section-title">About</h2>
+          <p>Hi! I’m Ruofeng, a New Media Technology student based in NYC. I create motion graphics and short videos that explore stories of community, culture, and emotion through engaging visuals.</p>
+          <p>Recent projects include a Chinatown short documentary, a community promo for NYC Health + Hospitals / Woodhull, and Hello Kitty video pieces.</p>
         </div>
       </div>
     </section>
 
-    
+    <!-- Contact / Footer section -->
+    <section id="contact" class="container section">
+      <h2 class="section-title">Contact</h2>
+      <ul class="contact">
+        <li>Email: <a href="mailto:ruofengchen1020@gmail.com">ruofengchen1020@gmail.com</a></li>
+        <li>Instagram: <a href="https://www.instagram.com/icyy2o18" target="_blank" rel="noopener">icyy2o18</a></li>
+        <li>Resume: <a href="images/resume.png" target="_blank" rel="noopener">Download Resume</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <small>© <span id="year"></span> Ruofeng Chen · All rights reserved.</small>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

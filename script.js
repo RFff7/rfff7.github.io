@@ -1,11 +1,8 @@
-// ========= 动态年份 =========
+// Dynamic year
 const yearSpan = document.getElementById("year");
 if (yearSpan) {
   yearSpan.textContent = new Date().getFullYear();
 }
-
-// ========= 主题切换（light / dark） =========
-// 使用 body.dark，跟你的 CSS 一致
 
 console.log("theme script loaded");
 
@@ -17,9 +14,9 @@ console.log("savedTheme:", savedTheme);
 
 if (savedTheme === "dark") {
   document.body.classList.add("dark");
-  if (themeToggleBtn) themeToggleBtn.textContent = "☀"; // 暗色模式显示太阳
+  if (themeToggleBtn) themeToggleBtn.textContent = "☀";
 } else {
-  if (themeToggleBtn) themeToggleBtn.textContent = "☾"; // 亮色模式显示月亮
+  if (themeToggleBtn) themeToggleBtn.textContent = "☾";
 }
 
 // 点击切换主题
@@ -41,7 +38,3 @@ if (themeToggleBtn) {
     }
   });
 }
-
-// ========= （可选）Gallery Lightbox，如果以后要用再打开 =========
-// 现在你的新 layout 没有 #galleryGrid / #lightbox，下面这段可以先注释掉，
-// 或者保留也没关系，因为有 ?
