@@ -346,10 +346,7 @@ body.dark .tags li {
     margin: 24px 16px;
   }
 
-  .panel-label {
-    writing-mode: horizontal-tb;
-    letter-spacing: 0.25em;
-  }
+  
 
   .hero-right {
     align-items: flex-start;
@@ -368,4 +365,29 @@ body.dark .tags li {
   .image-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
+}
+/* ======= 全屏 hero + 外框 ======= */
+.panel-full {
+  height: 90vh;                 /* 全屏高度 */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;       /* 垂直置中 */
+  border: 4px solid var(--text-main); /* 外框线条 */
+  border-radius: 12px;
+  margin-top: 20px;
+  box-sizing: border-box;
+  max-width: 100%;               /* 去掉原本 panel 的固定宽度限制 */
+  width: calc(100% - 40px);      /* 左右留一点边距 */
+}
+
+/* 让内部 grid 不自己撑满界面 */
+.panel-full .panel-hero {
+  height: auto;
+}
+
+
+/* 居中对齐内部布局（左文字 + 右 kitty）*/
+.panel-full .hero-left,
+.panel-full .hero-right {
+  transform: translateY(0); /* 防止之前的 margin 影响 */
 }
