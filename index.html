@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Ruofeng Chen | Portfolio</title>
-  <meta name="description" content="Portfolio of Ruofeng Chen – New Media Technology: motion graphics, video editing, and expressive visual storytelling." />
+  <meta name="description" content="Portfolio of Ruofeng Chen – New Media Technology: motion graphics, video editing, and expressive visual storytelling across graphic design and video media." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
@@ -14,46 +14,91 @@
   <header class="site-header container">
     <a class="brand" href="#top">Ruofeng Chen</a>
     <nav class="nav" aria-label="Primary">
-      <a href="#work">Work</a>
-      <a href="#gallery">Images</a>
-    
+      <a href="#Bio"></a>Bio
+      <a href="#Work">Work</a>
+       <a href="#Contact">Contact</a>
       <button id="themeToggle" class="theme-toggle" aria-label="Toggle dark mode">☾</button>
     </nav>
   </header>
 
-  <!-- ======= FULL INTRO PANEL ======= -->
+  <main>
+
+<!-- ======= PANEL 1: NAME + KITTY + TAGLINE ======= -->
 <section class="panel panel-intro">
-  <div class="intro-left">
-    <p class="intro-name">Ruofeng Chen</p>
-    <p class="intro-title">Visual storytelling in<br>graphic, videos</p>
+  <div class="intro-wrapper">
 
-    <div class="intro-contact">
-      <h3>Contact</h3>
-      <ul>
-        <li><a href="mailto:ruofengchen1020@gmail.com">email</a></li>
-        <li><a href="https://www.instagram.com/icyy2o18" target="_blank">instagram</a></li>
-        <li><a href="images/resume.png" target="_blank">resume</a></li>
-      </ul>
+    <!-- Left side -->
+    <div class="intro-left">
+      <h1 class="intro-name">Ruofeng Chen</h1>
+
+      <img src="images/hello-kitty.png" 
+           class="intro-kitty" 
+           alt="Hello Kitty">
     </div>
-  </div>
 
-  <div class="intro-right">
-    <p class="intro-bio">
-      Hi! I’m Ruofeng, a New Media Technology student based in NYC. I create motion graphics and short
-      videos that explore stories of community, culture, and emotion through engaging visuals.
-      <br><br>
-      Recent projects include a Chinatown short documentary, a community promo for NYC Health + Hospitals
-      / Woodhull, and Hello Kitty video pieces.
-    </p>
+    <!-- Right side -->
+    <div class="intro-right">
+      <p class="intro-tagline">
+        Visual storytelling across<br>
+        graphic design and video media.
+      </p>
+      <p>Welcome to my protfolio <3  </p>
+    </div>
 
-    <img src="images/hello-kitty.png" class="intro-kitty" alt="Hello Kitty">
   </div>
 </section>
 
 
+
+
+
+<!-- ======= PANEL 2: INTRO BOX WITH PHOTO ======= -->
+<section id="intro-box" class="panel intro-box">
+  <div class="intro-frame">
+
+    <div class="intro-box-content">
+
+      <!-- Left content (bio + contact) -->
+      <div class="intro-box-text">
+        <p class="intro-bio-text">
+          Hi! I’m Ruofeng, a New Media Technology student based in NYC.
+          I create motion graphics and short videos that explore stories
+          of community, culture, and emotion through engaging visuals.
+          <br><br>
+          Recent projects include a Chinatown documentary, a community
+          promo for NYC Health + Hospitals / Woodhull, and Hello Kitty
+          video pieces.
+        </p>
+
+        <div class="intro-meta">
+          <div class="intro-social">
+            <h3>Social</h3>
+            <p><a href="https://www.instagram.com/rickyy1649" target="_blank">@rickyy1649</a></p>
+          </div>
+
+          <div class="intro-contact2">
+            <h3>Contact</h3>
+            <p><a href="mailto:ruofengchen1020@gmail.com">ruofengchen1020@gmail.com</a></p>
+            <p><a href="assets/Ruofeng_Chen_Portfolio.pdf" target="_blank">Download PDF here</a></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right content (your photo) -->
+      <div class="intro-box-photo">
+        <img src="images/profile.jpg" alt="Ruofeng portrait">
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+
     <!-- Selected Work (3 videos) -->
     <section id="work" class="container section">
-      <h2 class="section-title">Selected Work</h2>
+      <h2 class="section-title">Selected works</h2>
       <div class="grid videos">
         <!-- Video 1 -->
         <article class="card">
@@ -95,7 +140,7 @@
 
     <!-- Image Gallery -->
     <section id="gallery" class="container section">
-      <h2 class="section-title">Image Gallery</h2>
+      <h2 class="section-title">Illustration & Graphics</h2>
       <div class="grid gallery" id="galleryGrid">
         <button class="thumb" data-full="images/shot1-large.jpg" aria-label="Open image 1">
           <img src="images/shot1.png" alt="Phone home screen design" loading="lazy">
@@ -124,35 +169,4 @@
       </dialog>
     </section>
 
-    <!-- About -->
-    <section id="about" class="container section about">
-      <div class="about-card">
-        <img src="images/profile.jpg" alt="Portrait of Ruofeng Chen" />
-        <div>
-          <h2 class="section-title">About</h2>
-          <p>Hi! I’m Ruofeng, a New Media Technology student based in NYC. I create motion graphics and short videos that explore stories of community, culture, and emotion through engaging visuals.</p>
-          <p>Recent projects include a Chinatown short documentary, a community promo for NYC Health + Hospitals / Woodhull, and Hello Kitty video pieces.</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- Contact / Footer section -->
-    <section id="contact" class="container section">
-      <h2 class="section-title">Contact</h2>
-      <ul class="contact">
-        <li>Email: <a href="mailto:ruofengchen1020@gmail.com">ruofengchen1020@gmail.com</a></li>
-        <li>Instagram: <a href="https://www.instagram.com/icyy2o18" target="_blank" rel="noopener">icyy2o18</a></li>
-        <li>Resume: <a href="images/resume.png" target="_blank" rel="noopener">Download Resume</a></li>
-      </ul>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <div class="container">
-      <small>© <span id="year"></span> Ruofeng Chen · All rights reserved.</small>
-    </div>
-  </footer>
-
-  <script src="script.js"></script>
-</body>
-</html>
+    
