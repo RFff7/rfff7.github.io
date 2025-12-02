@@ -654,7 +654,7 @@ body.dark .icon {
 /* 关键：让图片按比例缩放，不要拉满高度 */
 .img-overlay-inner img {
   display: block;
-  max-width: 100%;
+  max-width: 95%;
   max-height: 90vh;          /* 高度不超过视口 */
   width: auto;
   height: auto;
