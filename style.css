@@ -21,7 +21,7 @@ body.dark {
 /* ======== Base ======== */
 body {
   margin: 0;
-  font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  font-family: "Baloo 2", sans-serif; 
   background-color: var(--bg);
   color: var(--text);
   transition: background-color 0.3s ease, color 0.3s ease;
@@ -622,4 +622,44 @@ body.dark .icon {
     max-width: 320px;
     margin: 0 auto;
   }
+}
+
+.img-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+.img-overlay.visible {
+  display: flex;
+}
+
+.img-overlay-inner {
+  position: relative;
+  max-width: min(90vw, 1100px);
+  max-height: 90vh;
+}
+
+.img-overlay-inner {
+  position: relative;
+  max-width: min(90vw, 1100px);
+  max-height: 90vh;
+  overflow: hidden;          /* 防止超出容器 */
+}
+
+/* 关键：让图片按比例缩放，不要拉满高度 */
+.img-overlay-inner img {
+  display: block;
+  max-width: 100%;
+  max-height: 90vh;          /* 高度不超过视口 */
+  width: auto;
+  height: auto;
+  margin: 0 auto;
+  object-fit: contain;
+  border-radius: 16px;
+  background: #000;
 }

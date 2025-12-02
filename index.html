@@ -7,96 +7,86 @@
   <meta name="description" content="Portfolio of Ruofeng Chen – New Media Technology: motion graphics, video editing, and expressive visual storytelling across graphic design and video media." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+ <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
   <header class="site-header container">
-    <a class="brand" href="#top">Ruofeng Chen</a>
+    <a class="brand" href="#top">Portfolio</a>
     <nav class="nav" aria-label="Primary">
-      <a href="#Bio"></a>Bio
-      <a href="#Work">Work</a>
-       <a href="#Contact">Contact</a>
+      <a href="#intro-box">Bio</a>
+      <a href="#work">Work</a>
+      <a href="#gallery">Image</a> <!-- 你之后可以改成真正的 contact 区 -->
       <button id="themeToggle" class="theme-toggle" aria-label="Toggle dark mode">☾</button>
     </nav>
   </header>
 
-  <main>
+  <main id="top">
 
-<!-- ======= PANEL 1: NAME + KITTY + TAGLINE ======= -->
-<section class="panel panel-intro">
-  <div class="intro-wrapper">
+    <!-- ======= PANEL 1: NAME + KITTY + TAGLINE ======= -->
+    <section class="panel panel-intro">
+      <div class="intro-wrapper">
+        <!-- Left side -->
+        <div class="intro-left">
+          <h1 class="intro-name">Ruofeng Chen</h1>
+          <img src="images/hello-kitty.png" 
+               class="intro-kitty" 
+               alt="Hello Kitty">
+        </div>
 
-    <!-- Left side -->
-    <div class="intro-left">
-      <h1 class="intro-name">Ruofeng Chen</h1>
-
-      <img src="images/hello-kitty.png" 
-           class="intro-kitty" 
-           alt="Hello Kitty">
-    </div>
-
-    <!-- Right side -->
-    <div class="intro-right">
-      <p class="intro-tagline">
-        Visual storytelling across<br>
-        graphic design and video media.
-      </p>
-      <p>Welcome to my protfolio <3  </p>
-    </div>
-
-  </div>
-</section>
-
-
-
-
-
-<!-- ======= PANEL 2: INTRO BOX WITH PHOTO ======= -->
-<section id="intro-box" class="panel intro-box">
-  <div class="intro-frame">
-
-    <div class="intro-box-content">
-
-      <!-- Left content (bio + contact) -->
-      <div class="intro-box-text">
-        <p class="intro-bio-text">
-          Hi! I’m Ruofeng, a New Media Technology student based in NYC.
-          I create motion graphics and short videos that explore stories
-          of community, culture, and emotion through engaging visuals.
-          <br><br>
-          Recent projects include a Chinatown documentary, a community
-          promo for NYC Health + Hospitals / Woodhull, and Hello Kitty
-          video pieces.
-        </p>
-
-        <div class="intro-meta">
-          <div class="intro-social">
-            <h3>Social</h3>
-            <p><a href="https://www.instagram.com/rickyy1649" target="_blank">@rickyy1649</a></p>
-          </div>
-
-          <div class="intro-contact2">
-            <h3>Contact</h3>
-            <p><a href="mailto:ruofengchen1020@gmail.com">ruofengchen1020@gmail.com</a></p>
-            <p><a href="assets/Ruofeng_Chen_Portfolio.pdf" target="_blank">Download PDF here</a></p>
-          </div>
+        <!-- Right side -->
+        <div class="intro-right">
+          <p class="intro-tagline">
+            Visual storytelling across<br>
+            graphic design and video media.
+          </p>
+          <p>Welcome to my portfolio &lt;3</p>
         </div>
       </div>
+    </section>
 
-      <!-- Right content (your photo) -->
-      <div class="intro-box-photo">
-        <img src="images/profile.jpg" alt="Ruofeng portrait">
+    <!-- ======= PANEL 2: INTRO BOX WITH PHOTO ======= -->
+    <section id="intro-box" class="panel intro-box">
+      <div class="intro-frame">
+        <div class="intro-box-content">
+
+          <!-- Left content (bio + contact) -->
+          <div class="intro-box-text">
+            <p class="intro-bio-text">
+              Hi! I’m Ruofeng, a New Media Technology student based in NYC.
+              I create motion graphics and short videos that explore stories
+              of community, culture, and emotion through engaging visuals.
+              <br><br>
+              Recent projects include a Chinatown documentary, a community
+              promo for NYC Health + Hospitals / Woodhull, and Hello Kitty
+              video pieces.
+            </p>
+
+            <div class="intro-meta">
+              <div class="intro-social">
+                <h3>Social</h3>
+                <p><a href="https://www.instagram.com/rickyy1649" target="_blank">@rickyy1649</a></p>
+              </div>
+
+              <div class="intro-contact2">
+                <h3>Contact</h3>
+                <p><a href="mailto:ruofengchen1020@gmail.com">ruofengchen1020@gmail.com</a></p>
+                <p><a href="images/Resume.png" target="_blank">Download PDF here</a></p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right content (your photo) -->
+          <div class="intro-box-photo">
+            <img src="images/profile.jpg" alt="Ruofeng portrait">
+          </div>
+
+        </div>
       </div>
+    </section>
 
-    </div>
-
-  </div>
-</section>
-
-
-
-    <!-- Selected Work (3 videos) -->
+    <!-- ======= Selected Works ======= -->
     <section id="work" class="container section">
       <h2 class="section-title">Selected works</h2>
       <div class="grid videos">
@@ -138,35 +128,48 @@
       </div>
     </section>
 
-    <!-- Image Gallery -->
+    <!-- ======= Image Gallery ======= -->
     <section id="gallery" class="container section">
-      <h2 class="section-title">Illustration & Graphics</h2>
-      <div class="grid gallery" id="galleryGrid">
-        <button class="thumb" data-full="images/shot1-large.jpg" aria-label="Open image 1">
-          <img src="images/shot1.png" alt="Phone home screen design" loading="lazy">
+      <h2 class="section-title">Image Gallery</h2>
+
+      <div class="grid gallery">
+        <button class="thumb" aria-label="Open image 1">
+          <img src="images/shot1.png" alt="Design shot 1">
         </button>
-        <button class="thumb" data-full="images/shot2-large.jpg" aria-label="Open image 2">
-          <img src="images/shot2.png" alt="Phone lock screen design" loading="lazy">
+        <button class="thumb" aria-label="Open image 2">
+          <img src="images/shot2.png" alt="Design shot 2">
         </button>
-        <button class="thumb" data-full="images/shot3-large.jpg" aria-label="Open image 3">
-          <img src="images/shot3.png" alt="Desktop design" loading="lazy">
+        <button class="thumb" aria-label="Open image 3">
+          <img src="images/shot3.png" alt="Design shot 3">
         </button>
-        <button class="thumb" data-full="images/shot4-large.jpg" aria-label="Open image 4">
-          <img src="images/shot4.png" alt="Infographic design" loading="lazy">
+        <button class="thumb" aria-label="Open image 4">
+          <img src="images/shot4.png" alt="Design shot 4">
         </button>
-        <button class="thumb" data-full="images/shot5-large.jpg" aria-label="Open image 5">
-          <img src="images/shot5.png" alt="One page design" loading="lazy">
+        <button class="thumb" aria-label="Open image 5">
+          <img src="images/shot5.png" alt="Design shot 5">
         </button>
-        <button class="thumb" data-full="images/shot6-large.jpg" aria-label="Open image 6">
-          <img src="images/shot6.jpg" alt="Chinatown photography" loading="lazy">
+        <button class="thumb" aria-label="Open image 6">
+          <img src="images/shot6.jpg" alt="Design shot 6">
         </button>
       </div>
-
-      <!-- Lightbox Modal -->
-      <dialog id="lightbox" class="lightbox" aria-label="Image preview">
-        <button class="close" aria-label="Close" formmethod="dialog">×</button>
-        <img id="lightboxImg" src="" alt="Expanded image" />
-      </dialog>
     </section>
 
-    
+  </main>
+
+  <!-- ✅ 这里才是 Overlay，放在 body 里面，不是 head ！ -->
+  <div id="imgOverlay" class="img-overlay">
+    <div class="img-overlay-inner">
+      <button class="img-overlay-close" aria-label="Close">×</button>
+      <img id="imgOverlayImg" src="" alt="Preview image">
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="container">
+      <small>© <span id="year"></span> Ruofeng Chen · All rights reserved.</small>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
